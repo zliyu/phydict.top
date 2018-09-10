@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv=”Content-Type” content=”text/html; charset=utf-8″>
+	<link rel="shortcut icon" href="icon.ico">
+	<title>物理公式-详细信息</title>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">  
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>
+<style>
+
+</style>
+</head>
+<body>
+
+<div class="container-fluid">
+<br>
+<ul class="nav nav-pills">
+	<li><img src="icon.ico" width="32" height="32" alt="" onclick="window.location.href='home.html'"></li>
+	<li>&nbsp&nbsp&nbsp&nbsp</li>
+	<li><input type="text" class="form-control" id="inpu" placeholder="搜索"></li>
+	<li><button id="search_btn" type="button" class="btn btn-primary" onclick="getinput(); searchinput(); to()">
+		      <span class="glyphicon glyphicon-search"></span>
+	    </button>
+	</li>
+	<li><a href="alle.html">全部公式</a></li>
+	<li><a href="constant.html">物理常数</a></li>
+	<!--
+	<li class="disabled"><a href="#">公式本</a></li>
+	-->
+	<ul class="nav nav-pills navbar-right">
+	<!--
+    <li class="disabled"><a href="#">登录/注册</a></li>
+    -->
+	<li class="dropdown">
+		<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+			反馈<span class="caret"></span>
+		</a>
+		<ul class="dropdown-menu">
+			<li><a>physics.dictionary@hotmail.com</a></li>
+		</ul>
+    </li>
+    </ul>
+</ul>
+</div>
+<hr>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-2">
+      <br>
+      <ul class="nav nav-pills nav-stacked">
+        <li><a href="home.html">首页</a></li>
+        <li><a href="alle.html">全部公式</a></li>
+        <li><a href="constant.html">物理常数</a></li>
+      </ul>
+      <hr class="hidden-sm hidden-md hidden-lg">
+    </div>
+	  
+    <div class="col-sm-8" id="app">
+      <h2 v-html="print"></h2>
+      <h3>{{form_chn}}</h3>
+      <br>
+      <h4>
+      <span class="label label-primary">{{class1}}</span>
+      <span class="label label-info">{{class2}}</span>
+      <span class="label label-default">{{class3}}</span>
+      </h4>
+      <br><br>
+      <ul class="nav nav-tabs">
+      <li class="active"><a data-toggle="tab" href="#home">解释</a></li>
+      <li><a data-toggle="tab" href="#menu1" v-if="vue.lem[i].photo != ''">图解</a></li>
+      <li><a data-toggle="tab" href="#menu2" v-if="vue.lem[i].apply != ''">适用范围</a></li>
+      <li><a data-toggle="tab" href="#menu3" v-if="vue.lem[i].de != ''">推导</a></li>
+      <li><a data-toggle="tab" href="#menu4" v-if="eg_q != ''">示例</a></li>
+      <li class="disabled" v-if=false><a>相关公式</a></li>
+      </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <br>
+      <p v-html="descript1"></p>
+      <p v-html="descript2"></p>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <br>
+      <img :src="photo" width="500">
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <br>
+      <p v-html="apply"></p>
+    </div>
+    <div id="menu3" class="tab-pane fade">
+      <br>
+      <p v-html="de"></p>
+    </div>
+    <div id="menu4" class="tab-pane fade">
+      <br>
+      <p v-html="eg_q"></p>
+      <p v-html="eg_a"></p>
+    </div>
+    
+  </div>
+  </div>
+    
+	<div class="col-sm-2">
+		<p><p>
+	</div>
+    
+  </div>
+</div>
+
+<script type="text/javascript" src="data.js"></script>
+<script type="text/javascript" src="function.js"></script>
+<script>
+ //get data
+  var thisURL = document.URL; 
+  var i = decodeURI(thisURL.split('?')[1]); 
+  new Vue({
+  el: '#app',
+  data: {
+    formula: vue.lem[i].formula,
+    print: vue.lem[i].print,
+    form_chn: vue.lem[i].form_chn,
+    class1: vue.lem[i].class1,
+    class2: vue.lem[i].class2,
+    class3: vue.lem[i].class3,
+    descript1: vue.lem[i].descript1,
+    descript2: vue.lem[i].descript2,
+    photo: vue.lem[i].photo,
+    apply: vue.lem[i].apply,
+    de: vue.lem[i].de,
+    eg_q: vue.lem[i].eg_q,
+    eg_a: vue.lem[i].eg_a,
+    relate: vue.lem[i].relate
+  }})
+
+</script>
+
+
+
+</body>
+</html>

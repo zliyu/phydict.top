@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv=”Content-Type” content=”text/html; charset=utf-8″>
+  <link rel="shortcut icon" href="icon.ico">
+  <title>物理公式-搜索结果</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">  
+  <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>
+</head>
+<body>
+
+<div class="container-fluid">
+<br>
+<ul class="nav nav-pills">
+	<li><img src="icon.ico" width="32" height="32" alt="" onclick="window.location.href='home.html'"></li>
+	<li>&nbsp&nbsp&nbsp&nbsp</li>
+	<li><input type="text" class="form-control" id="inpu" placeholder="搜索"></li>
+	<li><button id="search_btn" type="button" class="btn btn-primary" onclick="getinput(); searchinput(); to()">
+		      <span class="glyphicon glyphicon-search"></span>
+	    </button>
+	</li>
+	<li><a href="alle.html">全部公式</a></li>
+	<li><a href="constant.html">物理常数</a></li>
+	<!--
+	<li class="disabled"><a href="#">公式本</a></li>
+	-->
+	<ul class="nav nav-pills navbar-right">
+	<!--
+    <li class="disabled"><a href="#">登录/注册</a></li>
+    -->
+	<li class="dropdown">
+		<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+			反馈<span class="caret"></span>
+		</a>
+		<ul class="dropdown-menu">
+			<li><a>physics.dictionary@hotmail.com</a></li>
+		</ul>
+    </li>
+    </ul>
+</ul>
+</div>
+<hr>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-2">
+      <ul class="nav nav-pills nav-stacked">
+        <li><a href="home.html">首页</a></li>
+        <li><a href="alle.html">全部公式</a></li>
+        <li><a href="constant.html">物理常数</a></li>
+      </ul>
+      <hr class="hidden-sm hidden-md hidden-lg">
+    </div>
+	  <div class="col-sm-1">
+	  </div>
+    <div class="col-sm-6" id="result">
+        <button type="button" class="btn btn-primary btn-lg btn-block" value = "1" onclick="get(this.value)" v-if="re1 != ''">
+          <p v-html="re1"></p>{{sub1}}
+        </button>
+        <button type="button" class="btn btn-primary btn-lg btn-block" value = "2" onclick="get(this.value)" v-if="re2 != ''">
+          <p v-html="re2"></p>{{sub2}}
+        </button>
+        <button type="button" class="btn btn-primary btn-lg btn-block" value = "3" onclick="get(this.value)" v-if="re3 != ''">
+          <p v-html="re3"></p>{{sub3}}
+        </button>
+        <button type="button" class="btn btn-primary btn-lg btn-block" value = "4" onclick="get(this.value)" v-if="re4 != ''">
+          <p v-html="re4"></p>{{sub4}}
+        </button>
+        <button type="button" class="btn btn-primary btn-lg btn-block" value = "5" onclick="get(this.value)" v-if="re5 != ''">
+          <p v-html="re5"></p>{{sub5}}
+        </button>
+        <button type="button" class="btn btn-primary btn-lg btn-block" value = "6" onclick="get(this.value)" v-if="re6 != ''">
+          <p v-html="re6"></p>{{sub6}}
+        </button>
+        <button type="button" class="btn btn-primary btn-lg btn-block" value = "7" onclick="get(this.value)" v-if="re7 != ''">
+          <p v-html="re7"></p>{{sub7}}
+        </button>
+        <button type="button" class="btn btn-primary btn-lg btn-block" value = "8" onclick="get(this.value)" v-if="re8 != ''">
+          <p v-html="re8"></p>{{sub8}}
+        </button>
+        <button type="button" class="btn btn-primary btn-lg btn-block" value = "9" onclick="get(this.value)" v-if="re9 != ''">
+          <p v-html="re9"></p>{{sub9}}
+        </button>
+        <button type="button" class="btn btn-primary btn-lg btn-block" value = "10" onclick="get(this.value)" v-if="re10 != ''">
+          <p v-html="re10"></p>{{sub10}}
+        </button>
+        <center><div v-if="re1 == ''">没有找到相关结果</div></center>
+    </div>
+  </div>
+</div>
+
+<script>
+  //get data
+  var thisURL = document.URL; 
+  var getval = decodeURI(thisURL.split('?')[1]); 
+  var ai = getval.split("%");
+</script>
+
+<script type="text/javascript" src="data.js"></script>
+<script type="text/javascript" src="function.js"></script>
+
+<script>
+  //show results
+  new Vue({
+  el: '#result',
+  data: {
+    re1: vue.lem[ai[0]].print,
+    sub1: vue.lem[ai[0]].form_chn,
+    re2: vue.lem[ai[1]].print,
+    sub2: vue.lem[ai[1]].form_chn,
+    re3: vue.lem[ai[2]].print,
+    sub3: vue.lem[ai[2]].form_chn,
+    re4: vue.lem[ai[3]].print,
+    sub4: vue.lem[ai[3]].form_chn,
+    re5: vue.lem[ai[4]].print,
+    sub5: vue.lem[ai[4]].form_chn,
+    re6: vue.lem[ai[5]].print,
+    sub6: vue.lem[ai[5]].form_chn,
+    re7: vue.lem[ai[6]].print,
+    sub7: vue.lem[ai[6]].form_chn,
+    re8: vue.lem[ai[7]].print,
+    sub8: vue.lem[ai[7]].form_chn,
+    re9: vue.lem[ai[8]].print,
+    sub9: vue.lem[ai[8]].form_chn,
+    re10: vue.lem[ai[9]].print,
+    sub10: vue.lem[ai[9]].form_chn
+  }})
+</script>
+</body>
+</html>
