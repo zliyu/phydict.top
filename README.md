@@ -1,2 +1,2 @@
 # phydict.top
-phydict.top: a web 'dictionary' for physics formulas
+phydict.top: a web dictionary for physics formulas
