@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8″>
+  <link rel="shortcut icon" href="icon.ico">
+  <title>物理公式-全部公式</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">  
+  <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>
+</head>
+<body>
+	
+<div class="container-fluid">
+<br>
+<ul class="nav nav-pills">
+	<li><img src="icon.ico" width="32" height="32" alt="" onclick="window.location.href='index.html'"></li>
+	<li>&nbsp&nbsp&nbsp&nbsp</li>
+	<li><input type="text" class="form-control" id="inpu" placeholder="搜索"></li>
+	<li><button id="search_btn" type="button" class="btn btn-primary" onclick="getinput(); searchinput(); to()">
+		      <span class="glyphicon glyphicon-search"></span>
+	    </button>
+	</li>
+	<li><a href="alle.html">全部公式</a></li>
+	<li><a href="constant.html">物理常数</a></li>
+	<!--
+	<li class="disabled"><a href="#">公式本</a></li>
+	-->
+	<ul class="nav nav-pills navbar-right">
+	<!--
+    <li class="disabled"><a href="#">登录/注册</a></li>
+    -->
+	<li class="dropdown">
+		<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+			反馈<span class="caret"></span>
+		</a>
+		<ul class="dropdown-menu">
+			<li><a>physics.dictionary@hotmail.com</a></li>
+		</ul>
+    </li>
+    </ul>
+</ul>
+</div>
+<hr>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-2">
+      <ul class="nav nav-pills nav-stacked">
+        <li><a href="index.html">首页</a></li>
+        <li class="active"><a href="alle.html">全部公式</a></li>
+        <li><a href="constant.html">物理常数</a></li>
+      </ul>
+      <hr class="hidden-sm hidden-md hidden-lg">
+    </div>
+	  
+<div class="col-sm-8">
+
+<!--力学-->
+<button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="collapse" data-target="#力学">
+	力学
+</button>
+<br>
+<div id="力学" class="collapse in">
+
+<button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#运动学">
+	运动学
+</button>
+<div id="运动学" class="collapse in">
+<table class="table table-striped">
+	<tbody>
+		<tr><td>x=vt</td><td>匀速直线运动位移公式</td></tr>
+		<tr><td>x=v<sub>0</sub>t+(1/2)at<sup>2</sup></td><td>匀加速直线运动位移公式</td></tr>
+		<tr><td>v<sub>t</sub>=v<sub>0</sub>+at</td><td>匀加速直线运动速度公式</td></tr>
+		<tr><td>x=(v<sub>0</sub> + v<sub>t</sub>)/2t</td><td>匀加速直线运动位移公式</td></tr>
+		<tr><td>x= v<sub>t</sub>t-(1/2)at<sup>2</sup></td><td>匀加速直线运动位移公式</td></tr>
+		<tr><td>2ax=v<sub>t</sub><sup>2</sup>-v<sub>0</sub><sup>2</sup></td><td>匀加速直线运动 位移与速度关系</td></tr>
+		<tr><td>Δx＝aT<sup>2</sup></td><td>匀速直线运动相邻等时间内位移差</td></tr>
+		<tr><td>h=gt<sup>2</sup>/2, t=√(2h/g)</td><td>自由落体</td></tr>
+		<tr><td>v<sub>t</sub>=gt</td><td>自由落体速度公式</td></tr>
+		<tr><td>x<sup>2</sup>=(v<sub>x0</sub> t) <sup>2</sup>+(v<sub>y0 </sub>t+gt<sup>2</sup>/2)<sup>2</sup></td><td>抛体运动位移</td></tr>
+		
+	</tbody>
+</table>
+</div><!--运动学-->
+
+<br>
+<button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#牛顿">
+	牛顿第二定律
+</button>
+<div id="牛顿" class="collapse in">
+<table class="table table-striped">
+	<tbody>
+		<tr><td>F=ma</td><td>牛顿第二定律</td></tr>
+		<tr><td>F=p/t</td><td>牛顿第二定律</td></tr>
+	</tbody>
+</table>
+</div><!--牛顿第二定律-->
+
+<br>
+<button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#圆周运动">
+	圆周运动
+</button>
+<div id="圆周运动" class="collapse in">
+<table class="table table-striped">
+	<tbody>
+		<tr><td>F=mv<sup>2</sup>/r, F=mω<sup>2</sup>r</td><td>圆周运动向心力</td></tr>
+		<tr><td>a=v<sup>2</sup>/r, a=ω<sup>2</sup>r</td><td>圆周运动向心加速度</td></tr>
+	</tbody>
+</table>
+</div><!--圆周运动-->
+
+<br>
+<button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#常见的力">
+	常见的力
+</button>
+<div id="常见的力" class="collapse in">
+<table class="table table-striped">
+	<tbody>
+		<tr><td>G=mg</td><td>重力</td></tr>
+		<tr><td>f=μN</td><td>滑动摩擦力</td></tr>
+		<tr><td>F=-kx</td><td>胡克定律</td></tr>
+	</tbody>
+</table>
+</div><!--常见的力-->
+
+<br>
+<button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#力矩">
+	力矩
+</button>
+<div id="力矩" class="collapse in">
+<table class="table table-striped">
+	<tbody>
+		<tr><td>M=r×F</td><td>力矩</td></tr>
+		<tr><td>F<sub>1</sub>L<sub>1</sub>=F<sub>2</sub>L<sub>2</sub></td><td>杠杆原理</td></tr>
+	</tbody>
+</table>
+</div><!--力矩-->
+
+<br>
+<button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#动量">
+	动量
+</button>
+<div id="动量" class="collapse in">
+<table class="table table-striped">
+	<tbody>
+		<tr><td>p=mv</td><td>动量</td></tr>
+		<tr><td>I=Ft</td><td>冲量</td></tr>
+		<tr><td>I=Δp, Ft=Δp</td><td>动量定理</td></tr>
+	</tbody>
+</table>
+</div><!--动量-->
+
+<br>
+<button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#角动量">
+	角动量
+</button>
+<div id="角动量" class="collapse in">
+<table class="table table-striped">
+	<tbody>
+		<tr><td>L=r×p</td><td>角动量</td></tr>
+		<tr><td>M=dL/dt</td><td>角动量定理</td></tr>
+	</tbody>
+</table>
+</div><!--角动量-->
+
+<br>
+<button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#功和机械能">
+	功和机械能
+</button>
+<div id="功和机械能" class="collapse in">
+<table class="table table-striped">
+	<tbody>
+		<tr><td>W=F·s, W=Fs cosθ</td><td>功</td></tr>
+		<tr><td>P=W/t, P=Fv</td><td>功率</td></tr>
+		<tr><td>E<sub>k</sub>=mv²/2</td><td>动能</td></tr>
+		<tr><td>W=E<sub>k2</sub>-E<sub>k1</sub></td><td>动能定理</td></tr>
+		<tr><td>E<sub>p</sub>=mgh</td><td>重力势能</td></tr>
+		<tr><td>E<sub>p</sub>=(1/2)kx²</td><td>弹性势能</td></tr>
+		<tr><td>E<sub>p</sub>=-GMm/r</td><td>引力势能</td></tr>
+	</tbody>
+</table>
+</div><!--功和机械能-->
+
+<br>
+<button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#天体运动">
+	天体运动
+</button>
+<div id="天体运动" class="collapse in">
+<table class="table table-striped">
+	<tbody>
+		<tr><td>F=GMm/R²</td><td>万有引力定律</td></tr>
+		<tr><td>T<sup>2</sup>/a<sup>3</sup>=K, T<sup>2</sup>/a<sup>3</sup>=4π<sup>2</sup>/GM</td><td>开普勒第三定律</td></tr>
+		<tr><td>g=GM/R²</td><td>天体表面的重力加速度</td></tr>
+		<tr><td>v=√(GM/r), v=√(gR)</td><td>第一宇宙速度, 环绕速度</td></tr>
+		<tr><td>v=√(2GM/r)</td><td>第二宇宙速度, 逃逸速度</td></tr>
+		<tr><td>E<sub>p</sub>=-GMm/r</td><td>引力势能</td></tr>
+		<tr><td>E=-GMm/2a</td><td>天体运动机械能</td></tr>
+		<tr><td>x²/a²+y²/b² = 1, a= -GMm/2E, b= √(-L²/2mE)</td><td>椭圆轨道方程</td></tr>
+		<tr><td>v=√(2GM(1/r - 1/2a))</td><td>椭圆轨道上任意处的速率</td></tr>
+	</tbody>
+</table>
+</div><!--天体运动-->
+
+<br>
+<button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#振动与波">
+	振动与波
+</button>
+<div id="振动与波" class="collapse in">
+<table class="table table-striped">
+	<tbody>
+		<tr><td>x=Acos(ωt+θ)</td><td>简谐振动方程</td></tr>
+		<tr><td>v=-ωAsin(ωt+θ)</td><td>简谐振动的速度</td></tr>
+		<tr><td>a=-ω²Acos(ωt+θ)</td><td>简谐振动的加速度</td></tr>
+		<tr><td>E=½kA², E=½mω²A²</td><td>简谐振动能量</td></tr>
+		<tr><td>T=2π√(m/k)</td><td>简谐振动周期</td></tr>
+		<tr><td>T=2π√(L/g)</td><td>单摆周期</td></tr>
+		<tr><td>v=λf</td><td>波速, 波长和频率</td></tr>
+		<tr><td>y=Acos(ωt-2πxλ+φ)</td><td>平面简谐波的波动方程</td></tr>
+		<tr><td>f=f<sub>0</sub>(v±v<sub>0</sub>)/(v-+v<sub>s</sub>)</td><td>多普勒效应</td></tr>
+	</tbody>
+</table>
+</div><!--振动与波-->
+
+<br>
+<button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#刚体">
+	刚体
+</button>
+<div id="刚体" class="collapse in">
+<table class="table table-striped">
+	<tbody>
+		<tr><td>COMING SOON...</td></tr>
+	</tbody>
+</table>
+</div><!--刚体-->
+<br>
+</div><!--力学-->
+
+
+<!--光学-->
+<button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="collapse" data-target="#光学">
+	光学
+</button>
+<br>
+<div id="光学" class="collapse in">
+
+<button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#几何光学">
+	几何光学
+</button>
+<div id="几何光学" class="collapse in">
+<table class="table table-striped">
+	<tbody>
+		<tr><td>θ<sub>i</sub>=θ<sub>r</sub></td><td>反射定律</td></tr>
+		<tr><td>n=c/v</td><td>绝对折射率</td></tr>
+		<tr><td>n<sub>1</sub>sin i<sub>1</sub>=n<sub>2</sub>sin i<sub>2</sub></td><td>斯涅尔定律 折射定律</td></tr>
+		<tr><td>n<sub>1</sub>sin i<sub>c</sub>=n<sub>2</sub></td><td>临界角, 全反射</td></tr>
+		<tr><td>1/s+1/s'=1/f</td><td>高斯公式</td></tr>
+		<tr><td>1/s+1/s'=2/r</td><td>单球面反射成像公式</td></tr>
+		<tr><td>m=-s'/s</td><td>单球面反射成像 横向放大率</td></tr>
+		<tr><td>n<sub>1</sub>/s+n<sub>2</sub>/s'=(n<sub>1</sub>-n<sub>2</sub>)/r</td><td>单球面折射成像公式</td></tr>
+		<tr><td>m=-n<sub>1</sub>s'/n<sub>2</sub>s</td><td>单球面折射成像 横向放大率</td></tr>
+		<tr><td>1/s+1/s'=((n-n')/n) (1/r<sub>2</sub>-1/r<sub>1</sub>)</td><td>薄透镜成像</td></tr>
+		<tr><td>m=-s'/s</td><td>薄透镜成像 横向放大率<br></td></tr>
+	</tbody>
+</table>
+</div><!--几何光学-->
+
+<br>
+<button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#波动光学">
+	波动光学
+</button>
+<div id="波动光学" class="collapse in">
+<table class="table table-striped">
+	<tbody>
+		<tr><td>δ=nl</td><td>光程</td></tr>
+		<tr><td>∆X=λD/d</td><td>杨氏双逢干涉</td></tr>
+		<tr><td>r=√(kRλ)</td><td>等厚干涉</td></tr>
+		<tr><td>asinθ=k<sub>暗</sub>λ, asinθ=(2k<sub>明</sub>+1)λ/2</td><td>单缝衍射</td></tr>
+		<tr><td>sinθ=1.22λ/d</td><td>最小分辨角</td></tr>
+	</tbody>
+</table>
+</div><!--波动光学-->
+<br>
+</div><!--光学-->
+
+
+<!--热学-->
+<button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="collapse" data-target="#热学">
+	热学
+</button>
+<br>
+<div id="热学" class="collapse in">
+
+<button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#理想气体">
+	理想气体&分子动理论
+</button>
+<div id="理想气体" class="collapse in">
+<table class="table table-striped">
+	<tbody>
+		<tr><td>pV=nRT (pV=NkT)</td><td>理想气体状态方程</td></tr>
+		<tr><td> E<sub>k</sub>=(3/2)kT</td><td>理想气体气体分子的平均动能</td></tr>
+		<tr><td>p=Nmv<sup>2</sup>/3V</td><td>理想气体压强公式</td></tr>
+		<tr><td>v=√(8kT/πm), v=√(8RT/πμ)</td><td>气体分子 平均速率</td></tr>
+		<tr><td>v=√(2kT/m), v=√(2RT/μ)</td><td>最概然速率 最可几速率</td></tr>
+		<tr><td>v<sub>rms</sub>=√(3kT/m), v<sub>rms</sub>=√(3RT/μ)</a></td><td>方均根速率</td></tr>
+	</tbody>
+</table>
+</div><!--理想气体&分子动理论-->
+
+<br>
+<button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#热力学第一定律">
+	热力学第一定律
+</button>
+<div id="热力学第一定律" class="collapse in">
+<table class="table table-striped">
+	<tbody>
+		<tr><td>△E=W+Q</td><td>热力学第一定律</td></tr>
+		<tr><td>E=(i/2)nRT, E=(i/2)NkT </td><td>内能</td></tr>
+		<tr><td>W=0, △E=Q=nC<sub>v</sub>△T</td><td>等容过程</td></tr>
+		<tr><td>W=-p△V, △E=(i/2)nR△T, Q=nC<sub>p</sub>△T </td><td>等压过程</td></tr>
+		<tr><td>△E=0, W=-Q=-nRT<i>ln</i>(V<sub>2</sub>/V<sub>1</sub>)</td><td>等温过程</td></tr>
+		<tr><td>Q=0, pV<sup>k</sup>=常数, TV<sup>k-1</sup>=常数</td><td>绝热过程</td></tr>
+	</tbody>
+</table>
+</div><!--热力学第一定律-->
+
+<br>
+<button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#热机">
+	热机
+</button>
+<div id="热机" class="collapse in">
+<table class="table table-striped">
+	<tbody>
+		<tr><td>η=W/Q<sub>1</sub>, η=1-Q<sub>2</sub>/Q<sub>1</sub></td><td>热机效率</td></tr>
+		<tr><td>ω=Q/W</td><td>制冷系数</td></tr>
+		<tr><td>η= 1-T<sub>2</sub>/ T<sub>1</sub></td><td>卡诺循环 热机效率</td></tr>
+		<tr><td>ω= T<sub>2</sub>/(T<sub>1</sub>-T<sub>2</sub>)</td><td>卡诺循环 制冷系数</td></tr>
+	</tbody>
+</table>
+</div><!--热机-->
+
+<br>
+<button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#热容和比热容">
+	热容和比热容
+</button>
+<div id="热容和比热容" class="collapse in">
+<table class="table table-striped">
+	<tbody>
+		<tr><td>C=Q/ΔT</td><td>热容</td></tr>
+		<tr><td>c=C/m, c=Q/(m⋅ΔT)</td><td>比热容</td></tr>
+		<tr><td>c<sub>n</sub>= C/n</td><td>摩尔热容</td></tr>
+	</tbody>
+</table>
+</div><!--热容和比热容-->
+
+<br>
+<button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#热传递">
+	热传递
+</button>
+<div id="热传递" class="collapse in">
+<table class="table table-striped">
+	<tbody>
+		<tr><td>Q=cm△t</td><td>吸热 放热</td></tr>
+		<tr><td>Q=qm</td><td>燃料燃烧放热</td></tr>
+		<tr><td>Q=Vq</td><td>气体燃料燃烧放热</td></tr>
+		<tr><td>Q=K(T<sub>1</sub>-T<sub>2</sub>)St/L</td><td>热传递</td></tr>
+		<tr><td>J=σT<sup>4</sup>, J=εσT<sup>4</sup></td><td>斯忒藩定律 黑体辐射</td></tr>
+	</tbody>
+</table>
+</div><!--热传递-->
+
+<br>
+<button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#物态变化">
+	物态变化
+</button>
+<div id="物态变化" class="collapse in">
+<table class="table table-striped">
+	<tbody>
+		<tr><td>Q=Lm</td><td>气液相变 汽化热</td></tr>
+		<tr><td>Q=λm</td><td>固液相变 熔化热</td></tr>
+	</tbody>
+</table>
+</div><!--物态变化-->
+<br>
+</div><!--热学-->
+
+
+
+<!--电磁学-->
+<button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="collapse" data-target="#电磁学">
+	电磁学
+</button>
+<br>
+<div id="电磁学" class="collapse in">
+
+<button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#静电场">
+	静电场
+</button>
+<div id="静电场" class="collapse in">
+<table class="table table-striped">
+	<tbody>
+		<!--静电场-->
+		<tr><td>F=kQq/r<sup>2</sup>, F=Qq/4πε<sub>0</sub>r<sup>2</sup></td><td>库仑定律</td></tr>
+		<tr><td>E=F/q</td><td>电场强度</td></tr>
+		<tr><td>E=kq/r<sup>2</sup>, E=q/4πε<sub>0</sub>r<sup>2</sup></td><td>点电荷的场强</td></tr>
+		<tr><td>Φ=E∙S, Φ=EScosθ</td><td>电通量</td></tr>
+		<tr><td>E∙S=(1/ε<sub>0</sub>)∑q</td><td>高斯定理</td></tr>
+		<tr><td>E=σ/2ε<sub>0</sub></td><td>均匀带电无限大平板的电场强度</td></tr>
+		<tr><td>E=σ/ε<sub>0</sub></td><td>均匀带电无限大平行板间电场强度</td></tr>
+		<tr><td>∮E∙dL=0</td><td>静电场环路定理</td></tr>
+		<tr><td>U=Ep/q</td><td>电势</td></tr>
+		<tr><td>U=E∙d, U=∫E∙dL</td><td>电势差</td></tr>
+		<tr><td>U=kQ/r<sup>2</sup>, U=Q/4πε<sub>0</sub>r</td><td>点电荷的电势</td></tr>
+		<tr><td>Ep =kQq/r<sup>2</sup>, Ep =Qq/4πε<sub>0</sub>r</td><td>点电荷的电势能</td></tr>
+		<!--电介质-->
+		<tr><td>ε=ε<sub>r</sub>∙ε<sub>0</sub></td><td>介电常数</td></tr>
+		<tr><td>ε<sub>r</sub>=C/C<sub>0</sub>, ε<sub>r</sub>=E<sub>0</sub>/E</td><td>相对介电常数</td></tr>
+		<!--电容-->
+		<tr><td>C=Q/U</td><td>电容定义式</td></tr>
+		<tr><td>C=C<sub>1</sub>+ C<sub>2</sub>+...</td><td>电容器的并联</td></tr>
+		<tr><td>1/C=1/C<sub>1</sub>+ 1/C<sub>2</sub>+...</td><td>电容器的串联</td></tr>
+		<tr><td>W=Q<sup>2</sup>/2C, W=CU<sup>2</sup>/2, W=QU/2</td><td>电容器储存的能量</td></tr>
+		<tr><td>C=εS/d, C=ε<sub>r</sub>S/4πkd</td><td>平行板电容器电容</td></tr>
+		<tr><td>C=4πεR</td><td>孤立导体球的电容</td></tr>
+		<tr><td>C=2πεH/ln(R<sub>2</sub>/R<sub>1</sub>)</td><td>同轴圆柱形电容器的电容</td></tr>
+		<tr><td>C=4πεR1R2/(R2-R1)</td><td>同心球形电容器的电容</td></tr>
+		<!--电场能量密度-->
+		<tr><td>w<sub>e</sub>=(1/2) ε<sub>0</sub> ε<sub>r</sub> E<sup>2</sup></td><td>电场能量密度</td></tr>
+	</tbody>
+</table>
+</div><!--静电场-->
+
+<br>
+<button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#恒定电流">
+	恒定电流
+</button>
+<div id="恒定电流" class="collapse in">
+<table class="table table-striped">
+	<tbody>
+		<tr><td>I=Q/t</td><td>电流定义式</td></tr>
+		<tr><td>R=ρL/S</td><td>电阻定律</td></tr>
+		<tr><td>R=R1+R2+…</td><td>电阻串联</td></tr>
+		<tr><td>1/R=1/R1+1/R2+…</td><td>电阻并联</td></tr>
+		<tr><td>I=U/R (U=IR, R= U/I)</td><td>欧姆定律(部分电路)</td></tr>
+		<tr><td>I=E/(R+r)</td><td>闭合电路欧姆定律</td></tr>
+		<tr><td>U=E-Ir</td><td>路端电压</td></tr>
+		<tr><td>P=W/t, P=UI ( P= U<sup>2</sup>/R, P= I<sup>2</sup>R )</td><td>电功率</td></tr>
+		<tr><td>W=Pt, W=UIt ( W=I<sup>2</sup>Rt, W=U<sup>2</sup>t/R )</td><td>电功</td></tr>
+		<tr><td>Q=I<sup>2</sup>Rt ( Q=UIt, Q=U<sup>2</sup>t/R )</td><td>焦耳定律</td></tr>
+		<tr><td>R=(n-1)R<sub>g</sub></td><td>电压表改装</td></tr>
+		<tr><td>R=R<sub>g</sub>/(n-1)</td><td>电流表改装</td></tr>
+		<tr><td>∑I = 0, ∑IR = ∑ε</td><td>基尔霍夫方程组</td></tr>
+	</tbody>
+</table>
+</div><!--恒定电流-->
+
+<br>
+<button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#磁场">
+	磁场
+</button>
+<div id="磁场" class="collapse in">
+<table class="table table-striped">
+	<tbody>
+		<tr><td>d<b>B</b>=(μ<sub>0</sub>/4π)(Ⅰ<b>dl</b>×<b>r</b>/r<sup>3</sup>)</td><td>毕奥-萨伐尔定律</td></tr>
+		<tr><td>∮B•dl=μ<sub>0</sub>∑Ⅰ</td><td>安培环路定理</td></tr>
+		<tr><td>M=IS×B</td><td>磁力矩</td></tr>
+		<tr><td>F=IL×B</td><td>安培力</td></tr>
+		<tr><td>F=qv×B</td><td>洛伦兹力</td></tr>
+		<tr><td>R=mv/qB</td><td>回旋半径</td></tr>
+		<tr><td>T=2πm/qB</td><td>回旋周期</td></tr>
+		<tr><td>f=qB/2πm</td><td>回旋频率</td></tr>
+		<tr><td>h=2πmv/qB</td><td>螺距</td></tr>
+	</tbody>
+</table>
+</div><!--磁场-->
+
+<br>
+<button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#电磁感应">
+	电磁感应
+</button>
+<div id="电磁感应" class="collapse in">
+<table class="table table-striped">
+	<tbody>
+		<tr><td>Φ=B·S</td><td>磁通量</td></tr>
+		<tr><td>E=-dΦ/dt</td><td>法拉第电磁感应定律</td></tr>
+	</tbody>
+</table>
+</div><!--电磁感应-->
+
+<br>
+<button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#交流电">
+	交流电
+</button>
+<div id="交流电" class="collapse in">
+<table class="table table-striped">
+	<tbody>
+		<tr><td>COMING SOON...</td></tr>
+	</tbody>
+</table>
+</div><!--交流电-->
+
+<br>
+</div><!--电磁学-->
+
+
+<!--近代物理-->
+<button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="collapse" data-target="#近代物理">
+	近代物理
+</button>
+<br>
+<div id="近代物理" class="collapse in">
+
+<button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#相对论">
+	相对论
+</button>
+<div id="相对论" class="collapse in">
+<table class="table table-striped">
+	<tbody>
+		<tr><td>COMING SOON...</td></tr>
+	</tbody>
+</table>
+</div><!--相对论-->
+
+<br>
+<button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#量子论">
+	量子论
+</button>
+<div id="量子论" class="collapse in">
+<table class="table table-striped">
+	<tbody>
+		<tr><td>COMING SOON...</td></tr>
+	</tbody>
+</table>
+</div><!--量子论-->
+<br>
+</div><!--近代物理-->
+
+
+
+
+
+</div><!--col-sm-8-->
+</div><!--row-->
+</div><!--container-fluid-->
+</body>
+
+<script type="text/javascript" src="data.js"></script>
+<script type="text/javascript" src="function.js"></script>
+</html>
